@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitro Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- CDN Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Invitro Dashboard</h1>
+  </header>
+
+  <main class="dashboard">
+    <!-- Bagian 1: PH & Suhu -->
+    <section class="chart-box">
+      <h2>Kadar pH & Suhu Larutan</h2>
+      <canvas id="phSuhuChart"></canvas>
+    </section>
+
+    <!-- Bagian 2: CH4 -->
+    <section class="chart-box">
+      <h2>Kadar CH4</h2>
+      <canvas id="ch4Chart"></canvas>
+    </section>
+
+    <!-- Bagian 3: CO2 -->
+    <section class="chart-box">
+      <h2>Kadar CO2</h2>
+      <canvas id="co2Chart"></canvas>
+    </section>
+
+    <!-- Bagian 4: H2 -->
+    <section class="chart-box">
+      <h2>Kadar H2</h2>
+      <canvas id="h2Chart"></canvas>
+    </section>
+
+      <!-- Bagian 5: Panas Air dalam Tank -->
+    <section class="chart-box half-donut">
+     <h2>Panas Air dalam Tank</h2>
+    <canvas id="panasAirChart"></canvas>
+    </section>
+
+  <!-- Bagian 6: Tekanan Udara -->
+    <section class="chart-box half-donut">
+        <h2>Tekanan Udara</h2>
+        <canvas id="tekananUdaraChart"></canvas>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

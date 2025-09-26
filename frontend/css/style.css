@@ -1,0 +1,91 @@
+/* Global */
+body {
+  background-color: #eafafd;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333333;
+}
+
+/* Dashboard layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 kolom */
+  grid-template-rows: auto auto;      /* 2 baris */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Line charts */
+.dashboard .chart-box:nth-child(1) { grid-column: 1; grid-row: 1; } /* pH & Suhu */
+.dashboard .chart-box:nth-child(2) { grid-column: 2; grid-row: 1; } /* CH4 */
+.dashboard .chart-box:nth-child(3) { grid-column: 1; grid-row: 2; } /* CO2 */
+.dashboard .chart-box:nth-child(4) { grid-column: 2; grid-row: 2; } /* H2 */
+
+/* Half donuts di kolom 3 */
+.dashboard .chart-box:nth-child(5) { grid-column: 3; grid-row: 1; } /* Panas Air */
+.dashboard .chart-box:nth-child(6) { grid-column: 3; grid-row: 2; } /* Tekanan Udara */
+
+/* Chart box */
+.chart-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-box canvas {
+  flex: 1;
+  width: 85% !important;
+  height: 100% !important;
+}
+
+.chart-box h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #444444;
+}
+
+.chart-box.half-donut {
+  height: 300px;
+}
+
+/* Tablet: 2 kolom */
+@media (max-width: 1199px) and (min-width: 600px) {
+  .dashboard {
+    grid-template-columns: 1fr 1fr; /* 2 kolom */
+    grid-template-rows: auto;
+  }
+  .dashboard .chart-box {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+
+/* Mobile: 1 kolom */
+@media (max-width: 599px) {
+  .dashboard {
+    grid-template-columns: 1fr; /* 1 kolom */
+    grid-template-rows: auto;
+  }
+  .dashboard .chart-box {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}

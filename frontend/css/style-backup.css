@@ -1,0 +1,56 @@
+/* Global */
+body {
+  background-color: #eafafd;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333333;
+}
+
+/* Dashboard layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Chart box */
+.chart-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 400px;  
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-box canvas {
+  flex: 1;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.chart-box h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #444444;
+}
+
+.chart-box.half-donut {
+  height: 250px;
+}
