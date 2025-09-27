@@ -6,8 +6,6 @@ iot-dashboard/
 │   ├── config.py             # konfigurasi (database, MQTT, dll)
 │   ├── mqtt_client.py        # koneksi & handler MQTT
 │   ├── models.py             # ORM/database model (opsional)
-│   ├── routes/               # folder untuk API endpoint Flask
-│   │   └── data_routes.py
 │   └── utils/                # helper function (opsional)
 │       └── db.py
 │
@@ -23,8 +21,5 @@ iot-dashboard/
 ├── database/
 │   ├── schema.sql            # struktur tabel MySQL
 │   └── seed.sql              # data awal (opsional)
-│
-├── docs/                     # dokumentasi projek (opsional)
-│   └── arsitektur.png
 │
 └── README.md
