@@ -1,0 +1,6 @@
+flask==3.0.3
+flask-mqtt==1.1.1
+flask-mysqldb==1.0.1
+flask-cors==6.0.1
+pymysql==1.1.1
+sqlalchemy==2.0.34
